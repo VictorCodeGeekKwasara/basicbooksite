@@ -1,0 +1,25 @@
+
+.link-box {
+  position: absolute;
+  top:0%;
+  left:0%;
+  width: 100vw;
+  height: 90vh;
+  margin-top: 10vh;
+  background-color:brown;
+  transform: translateX(-100vw);
+  transition: transform 5s ease;
+}
+
+.link-box-active {
+transform: translateX(0vw);
+}
+
+
+
+@media screen and (min-width: 800px){
+
+  .drawer-icon{
+    opacity: 0
+  }
+}
