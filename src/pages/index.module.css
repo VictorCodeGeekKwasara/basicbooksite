@@ -1,0 +1,48 @@
+.hero {
+  width:100vw;
+  height:100vh;  
+  background-image:url("./mini.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .3;
+  mix-blend-mode:screen;
+  overflow: hidden;
+}
+
+
+.typography-box{
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:90vw;
+  color:white;
+  margin-top:10vh;
+  height: 80vh;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+ 
+}
+
+.great-span{
+
+  color:#00E6DB
+}
+
+.book-cards {
+  margin-top:10vh;
+  height:100vh;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+
+}
+
+.book-card {
+  /* background-image: linear-gradient(to bottom,rgba(20, 16, 0,1),#001712, rgba(20, 16, 0,111111)); */
+  min-width:100%;
+  min-height: 25vh;
+}

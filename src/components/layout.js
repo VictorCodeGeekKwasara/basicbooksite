@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './header'
+import { Container } from "@mui/material"
 // import { ThemeProvider, createTheme } from "@mui/material/styles"
 
 // const theme = createTheme({
@@ -17,7 +18,6 @@ import Header from './header'
 const Layout = ({children}) => {
   return (<>
             <Header/>
-            <div>Layout</div>
             {children}
           </>      
   )

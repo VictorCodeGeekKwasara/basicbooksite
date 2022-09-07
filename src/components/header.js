@@ -28,34 +28,38 @@ const Header = () => {
      setDrawer(!drawer)    
     }
   
-  const styles ={
-    appbar:{
-      padding:"5%",
-      display:"flex",
-      flexDirection:"row",
-      alignItems:"space-between", 
-      height:"10vh"     
-    },
+  const styles = {
+    appbar: theme => ({
+      padding: "5%",
+      display: "flex",
+      flexDirection: "row",
+      alignItems: "space-between",
+      height: "10vh",
+      backgroundColor:"transparent",
+      [theme.breakpoints.up("md")]: {
+        backgroundColor: "white",
+        opacity: 1,
+      },
+    }),
     drawerBox: {
-      marginLeft: "auto"    
-    }
+      marginLeft: "auto",
+    },
   }
   return (
     <AppBar component="nav" sx={styles.appbar}>
-        <nav ref={boxRef}  className={linkBox} >
-          <Link to="/">
-            <Button>Home</Button>
-          </Link>
-          <Link to="about">
-            <Button>About</Button>
-          </Link>
-          <Link to="books">
-            <Button>Books</Button>
-          </Link>
-          <Link to="contact">
-            <Button>Contact</Button>
-          </Link>
-        </nav>
+      <nav ref={boxRef} className={linkBox}>
+        <Button component={Link} to="/">
+          Home
+        </Button>
+
+        <Button component={Link} to="/about">
+          About
+        </Button>
+        <Button component={Link} to="books">
+          Books
+        </Button>
+          <Button component={Link} to="contact">Contact</Button>
+      </nav>
       <Box sx={styles.drawerBox} className={drawerIcon}>
         {drawer ? (
           <CloseRoundedIcon onClick={handleDrawer} />
