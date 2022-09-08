@@ -1,6 +1,7 @@
 .hero {
   width:100vw;
   height:100vh;  
+  display: flex;
   background-image:url("../images/mini.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -12,17 +13,17 @@
 
 .typography-box{
   position:absolute;
-  top:0px;
-  left:0px;
-  width:100vw;
+  top:10vh;
+  left:5vw;
+  width:90vw;
   color:white;
   margin-top:10vh;
-  height: 80vh;
+  height: 60vh;
   display:flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
- 
+  justify-content:space-around;
+  
 }
 
 .types-one {
@@ -38,6 +39,7 @@
 
 .books-button {
    margin-top: 5vh;
+  
 }
 
 .great-span{
@@ -55,6 +57,46 @@
   justify-content: space-between; 
 
 }
+
+.book-card {
+  background-image: linear-gradient(to bottom,rgba(20, 16, 0,1),#001712,#001712,rgba(20, 16, 0,.8));
+  /* width:100vw;
+  height:30vh;
+  display: flex; */
+
+}
+
+.card-media{
+  /* height:12vh;
+  width: 20vw;
+  object-fit:contain;
+  margin: .5vh 5vh; */
+}
+
+.card-text{
+ /* color:white;
+ display: flex;
+ flex-direction: column ;
+ justify-content: center;
+ width: 30vh; */
+}
+
+/* .card-text-inner {
+  display:flex ;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.book-action-area{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-around;
+} */
 
 
 

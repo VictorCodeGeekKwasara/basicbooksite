@@ -1,6 +1,6 @@
 import React from "react"
 import { CardActionArea } from "@mui/material"
-import { Box, Typography } from "@mui/material"
+import { Box, Typography,Card } from "@mui/material"
 import { Link } from "gatsby"
 import {
   cardMedia,
@@ -15,35 +15,42 @@ import { GatsbyImage } from "gatsby-plugin-image"
 const BookCard = ({image,title,author,year,alt,slug}) => {
   console.log(image +" "+ title)
   return (
-    <Box className={bookCard}>
-      <CardActionArea component={Link} to={"books/" +slug} className={bookActionArea}>
-        
-        <GatsbyImage image={image} alt={alt} className={cardMedia} />
-        
-        <Box className={cardText}>
-          <Box className={cardTextInner}>
-            <Typography variant="h4">Title:</Typography>
-            <Typography variant="p" pl={1}>
-              {title}
-            </Typography>
-          </Box>
-          <Box className={cardTextInner}>
-            <Typography variant="h4">Author:</Typography>
-            <Typography variant="p" pl={1}>
-              {" "}
-              {author}
-            </Typography>
-          </Box>
-          <Box className={cardTextInner}>
-            <Typography variant="h4">Year:</Typography>
-            <Typography variant="p" pl={1}>
-              {" "}
-              {year}
-            </Typography>
-          </Box>
-        </Box>
-      </CardActionArea>
-    </Box>
+    <Card
+      sx={{ backgroundColor: "#001712", color: "primary.main" }}
+      component={Link}
+      to={`books/${slug}`}
+      className={bookCard}
+    >
+      <GatsbyImage image={image} alt={alt} className={cardMedia} />
+      <div className={cardText}>
+        <div className={cardTextInner}>
+          <Typography variant="h6" component="span">
+            Title:
+          </Typography>
+          <Typography variant="p" pl={1}>
+            {title}
+          </Typography>
+        </div>
+        <div className={cardTextInner}>
+          <Typography variant="h6" component="span">
+            Author:
+          </Typography>
+          <Typography variant="p" pl={1}>
+            {" "}
+            {author}
+          </Typography>
+        </div>
+        <div className={cardTextInner}>
+          <Typography variant="h6" component="span">
+            Year:
+          </Typography>
+          <Typography variant="p" pl={1}>
+            {" "}
+            {year}
+          </Typography>
+        </div>
+      </div>
+    </Card>
   )
 }
 
