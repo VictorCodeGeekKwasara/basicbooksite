@@ -1,25 +1,29 @@
 import React from 'react'
 import Header from './header'
-import { Container } from "@mui/material"
-// import { ThemeProvider, createTheme } from "@mui/material/styles"
+import {
+  ThemeProvider,
+  createTheme,
+  responsiveFontSizes,
+} from "@mui/material/styles"
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: ,
-//     },
-//     secondary: {
-//       main: "#11cb5f",
-//     },
-//   },
-// })
-// theme={theme}
+let theme = createTheme({
+  palette: {
+    primary: {
+      main: "#DDB771",
+    },
+    secondary: {
+      main:"#00E6DB",
+    },
+  },
+})
+theme = responsiveFontSizes(theme)
 
 const Layout = ({children}) => {
-  return (<>
-            <Header/>
-            {children}
-          </>      
+  return (
+    <ThemeProvider theme={theme}>
+      <Header />
+      {children}
+    </ThemeProvider>
   )
 }
 

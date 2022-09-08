@@ -1,0 +1,38 @@
+.book-card {
+  background-image: linear-gradient(to bottom,rgba(20, 16, 0,1),#001712,#001712,rgba(20, 16, 0,.8));
+  width:90vw;
+  height:30vh;
+  display: flex;
+
+}
+
+.card-media{
+  height:22vh;
+  width: 30vw;
+  object-fit:contain;
+  /* margin: .5vh 5vh; */
+}
+
+.card-text{
+ color:white;
+ display: flex;
+ flex-direction: column ;
+ justify-content: center;
+}
+
+.card-text-inner {
+  display:flex ;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.book-action-area{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  justify-content:space-around;
+}

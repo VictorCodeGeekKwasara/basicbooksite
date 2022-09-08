@@ -48,17 +48,18 @@ const Header = () => {
   return (
     <AppBar component="nav" sx={styles.appbar}>
       <nav ref={boxRef} className={linkBox}>
-        <Button component={Link} to="/">
+        <Button variant="contained" component={Link} to="/">
           Home
         </Button>
-
-        <Button component={Link} to="/about">
+        <Button variant="contained" component={Link} to="/about">
           About
         </Button>
-        <Button component={Link} to="books">
+        <Button variant="contained" component={Link} to="books">
           Books
         </Button>
-          <Button component={Link} to="contact">Contact</Button>
+        <Button variant="contained" component={Link} to="contact">
+          Contact
+        </Button>
       </nav>
       <Box sx={styles.drawerBox} className={drawerIcon}>
         {drawer ? (
