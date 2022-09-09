@@ -2,6 +2,7 @@ import React from "react"
 import { Typography } from "@mui/material"
 import Layout from "../components/layout"
 import { container, typography, content } from "./about.module.css"
+import Seo from "../components/seo"
 const About = () => {
   return (
     <Layout>
@@ -38,5 +39,7 @@ const About = () => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="About" />
 
 export default About

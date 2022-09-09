@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Typography, Card, TextField } from '@mui/material'
 import {formBox,container, formComponents} from "./contact.module.css"
-
+import Seo from "../components/seo"
 const Contact = () => {
   return (
     <Layout>
@@ -37,5 +37,7 @@ const Contact = () => {
     </Layout>
   )
 }
+
+export const Head = () => <Seo title="Contact" />
 
 export default Contact

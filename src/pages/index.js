@@ -14,26 +14,7 @@ import {
 import BookCard from "../components/BookCard.js"
 import { Link, graphql } from "gatsby"
 import { Button } from "@mui/material"
-// import { CardActionArea } from "@mui/material"
-import { getImage } from "gatsby-plugin-image"
-
-// import socrates from "../images/socrates.jpg"
-
-const styles = {
-  typographyBox: {
-    position: "absolute",
-    top: "0px",
-    left: "0px",
-    width: "100vw",
-    color: "white",
-    marginTop: "10vh",
-    height: "80vh",
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-}
+import Seo from  "../components/seo"
 
 const Index = ({ data }) => {
   const dataArray = data.allMdx.nodes
@@ -115,5 +96,5 @@ query booksQuery{
     }
   }
 `
-
+export const Head = () => <Seo title="Home" />
 export default Index

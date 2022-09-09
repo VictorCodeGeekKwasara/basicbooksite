@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from '../../components/layout'
 import { container, textContainer } from "./book.module.css"
 import { Typography } from '@mui/material'
-
+import Seo from "../../components/seo"
 const Book = ({data,children}) => {
   const {title,author,slug,alt,year,book_cover} = data.mdx.frontmatter
   const img = getImage(book_cover)
@@ -43,4 +43,6 @@ export const bookquery = graphql`
     }
   }
 `
+
+export const Head = () => <Seo title="" />
 export default Book

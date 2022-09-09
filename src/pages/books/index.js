@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import BookCard from "../../components/BookCard"
 import { Box, Typography } from "@mui/material"
 import { bookCards,typography,container } from "./books.module.css"
-
+import Seo from "../../components/seo"
 
 const Books = ({ data }) => {
   const dataArray = data.allMdx.nodes
@@ -99,5 +99,5 @@ export const bookQuery = graphql`
     }
   }
 `
-
+export const Head = () => <Seo title="Books" />
 export default Books

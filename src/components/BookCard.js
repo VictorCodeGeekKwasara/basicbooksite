@@ -1,18 +1,9 @@
 import React from "react"
-import { CardActionArea } from "@mui/material"
-import { Box, Typography,Card } from "@mui/material"
+import { Typography, Card } from "@mui/material"
 import { Link } from "gatsby"
-import {
-  cardMedia,
-  cardText,
-  bookActionArea,
-  bookCard,
-} from "./bookcard.module.css"
-import { StaticImage } from "gatsby-plugin-image"
+import { cardMedia, cardText, bookCard } from "./bookcard.module.css"
 
-
-const BookCard = ({title,author,year,alt,slug,image}) => {
-
+const BookCard = ({ title, author, year, alt, slug, image }) => {
   return (
     <Card
       sx={{ backgroundColor: "#001712", color: "primary.main" }}
