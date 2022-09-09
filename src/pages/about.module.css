@@ -1,0 +1,27 @@
+
+
+.typography {
+  display:flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  margin-top: 2vh;
+  width: 100vw;
+  height: 80vh;
+  display:flex;
+  flex-direction: column;
+}
+
+
+.content {
+  width: 90vw ;
+  margin: auto;
+  margin-top: 10vh ;
+  display: flex ;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}

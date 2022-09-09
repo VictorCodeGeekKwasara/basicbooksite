@@ -27,8 +27,12 @@ body {
   transform: translate(0vw, 0vh);
   opacity: 1;
 }
+.drawer-icon {
+   
+    color:#00E6DB
+  }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 900px) {
   .link-box {
     position: static;
     width: 100%;
@@ -39,7 +43,6 @@ body {
     align-items: center;
     justify-content: space-around;
     margin-left: auto;
-    background-color: brown;
     transform: translate(0vh, 0vh);
     opacity: 1;
     transition: transform 0.8s cubic-bezier(0.56, 0.25, 0.81, 1.52),

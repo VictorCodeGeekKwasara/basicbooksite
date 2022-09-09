@@ -6,24 +6,23 @@ import {
   cardMedia,
   cardText,
   bookActionArea,
-  cardTextInner,
   bookCard,
 } from "./bookcard.module.css"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 
-const BookCard = ({image,title,author,year,alt,slug}) => {
-  console.log(image +" "+ title)
+const BookCard = ({title,author,year,alt,slug,image}) => {
+
   return (
     <Card
       sx={{ backgroundColor: "#001712", color: "primary.main" }}
       component={Link}
-      to={`books/${slug}`}
+      to={`${slug}`}
       className={bookCard}
     >
-      <GatsbyImage image={image} alt={alt} className={cardMedia} />
+      <img src={image} alt={alt} className={cardMedia} />
       <div className={cardText}>
-        <div className={cardTextInner}>
+        <div>
           <Typography variant="h6" component="span">
             Title:
           </Typography>
@@ -31,7 +30,7 @@ const BookCard = ({image,title,author,year,alt,slug}) => {
             {title}
           </Typography>
         </div>
-        <div className={cardTextInner}>
+        <div>
           <Typography variant="h6" component="span">
             Author:
           </Typography>
@@ -40,7 +39,7 @@ const BookCard = ({image,title,author,year,alt,slug}) => {
             {author}
           </Typography>
         </div>
-        <div className={cardTextInner}>
+        <div>
           <Typography variant="h6" component="span">
             Year:
           </Typography>

@@ -37,7 +37,6 @@ const styles = {
 
 const Index = ({ data }) => {
   const dataArray = data.allMdx.nodes
-  console.log(dataArray)
   return (
     <Layout>
       <Box
@@ -73,8 +72,14 @@ const Index = ({ data }) => {
 
       <Box className={bookCards}>
         {dataArray.map(
-          ({ frontmatter: { title, slug, author, year, alt, book_cover } }) => {
-            const img = getImage(book_cover)
+          ({ frontmatter: { title, slug, author, year, alt} }) => {
+              const images = {
+                "Ego is the enemy": "./egomini.jpg",
+                "Socrates Express": "./socratesmini.jpg",
+                "Man's search for meaning": "./mansmini.jpg",
+              }
+
+              const image = images[title]
             return (
               <article key={slug} style={{ display: "flex" }}>
                 <BookCard
@@ -82,8 +87,8 @@ const Index = ({ data }) => {
                   author={author}
                   year={year}
                   alt={alt}
-                  image={img}
-                  slug={slug}
+                  image={image}
+                  slug={`books/${slug}`}
                 />
               </article>
             )
@@ -95,7 +100,7 @@ const Index = ({ data }) => {
 }
 
 export const bookQuery = graphql`
-  {
+query booksQuery{
     allMdx {
       nodes {
         frontmatter {
@@ -104,11 +109,7 @@ export const bookQuery = graphql`
           title
           slug
           year(formatString: "MMMM D,YYYY")
-          book_cover {
-            childImageSharp {
-              gatsbyImageData
-            }
-          }
+          
         }
       }
     }

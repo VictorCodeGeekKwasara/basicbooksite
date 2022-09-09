@@ -54,10 +54,10 @@ const Header = () => {
         <Button variant="contained" component={Link} to="/about">
           About
         </Button>
-        <Button variant="contained" component={Link} to="books">
+        <Button variant="contained" component={Link} to="/books">
           Books
         </Button>
-        <Button variant="contained" component={Link} to="contact">
+        <Button variant="contained" component={Link} to="/contact">
           Contact
         </Button>
       </nav>

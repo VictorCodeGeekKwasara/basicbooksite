@@ -1,0 +1,10 @@
+.container{
+  width:100vw ;
+  height: 10vh ;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #DDB771;
+  margin-top: 10vh ;
+}

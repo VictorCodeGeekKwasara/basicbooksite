@@ -1,0 +1,29 @@
+.book-cards {
+  margin-top:10vh;
+  height:100vh;
+  width:100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; 
+
+}
+
+.book-card {
+  background-image: linear-gradient(to bottom,rgba(20, 16, 0,1),#001712,#001712,rgba(20, 16, 0,.8));
+  /* width:100vw;
+  height:30vh;
+  display: flex; */
+
+}
+
+.typography {
+  display:flex;
+  flex-direction: row ;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  margin-top: 2vh;
+}
