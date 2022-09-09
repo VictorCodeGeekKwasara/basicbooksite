@@ -14,3 +14,12 @@
   width:30vw;
   height:22vh;
 }
+
+@media screen and (min-width: 900px) {
+
+.card-media {
+  width:15vw;
+  height:22vh;
+}
+  
+}

@@ -13,7 +13,8 @@ const Header = () => {
   const boxRef = useRef();
 
   useEffect(()=>{    
- 
+    
+    
     
   },[])
 
@@ -37,12 +38,15 @@ const Header = () => {
       height: "10vh",
       backgroundColor:"transparent",
       [theme.breakpoints.up("md")]: {
-        backgroundColor: "white",
         opacity: 1,
+        position:"absolute",
+        backgroundColor: "#001712",
+        height: "5vh"
       },
     }),
     drawerBox: {
       marginLeft: "auto",
+      
     },
   }
   return (

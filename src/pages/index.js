@@ -41,8 +41,8 @@ const Index = ({ data }) => {
     <Layout>
       <Box
         sx={{
-          width: "100vw",
-          height: "100vh",
+          maxWidth: "100vw",
+          minHeight: "100vh",
           overflowX: "hidden",
           display: "flex",
         }}
@@ -79,7 +79,7 @@ const Index = ({ data }) => {
                 "Man's search for meaning": "./mansmini.jpg",
               }
 
-              const image = images[title]
+            const image = images[title]
             return (
               <article key={slug} style={{ display: "flex" }}>
                 <BookCard
