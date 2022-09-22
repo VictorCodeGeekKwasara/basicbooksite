@@ -19,7 +19,7 @@ import Seo from  "../components/seo"
 const styles = {
   button: theme => ({
     [theme.breakpoints.up("md")]:{
-      height: '150px',
+      height: '100px',
       width: '250px'
     }
   })
