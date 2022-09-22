@@ -16,6 +16,14 @@ import { Link, graphql } from "gatsby"
 import { Button } from "@mui/material"
 import Seo from  "../components/seo"
 
+const styles = {
+  button: theme => ({
+    [theme.breakpoints.up("md")]:{
+      height: '150px',
+      width: '250px'
+    }
+  })
+}
 const Index = ({ data }) => {
   const dataArray = data.allMdx.nodes
   return (
@@ -30,19 +38,21 @@ const Index = ({ data }) => {
       >
         <div className={hero}></div>
         <div className={typographyBox}>
-          <Typography variant="h2" className={typesOne}>
+          <Typography variant="h3" className={typesOne}>
             Welcome To
           </Typography>
-          <Typography variant="h1" className={typesTwo}>
+          <Typography variant="h2" className={typesTwo}>
             <span className={greatSpan}>Great</span> Reads
           </Typography>
-          <Typography variant="h2" className={typesThree}>
+          <Typography variant="h3" className={typesThree}>
             A site all about books and the love of books
           </Typography>
           <Button
+            sx={styles.button}
             className={booksButton}
             size="large"
             variant="contained"
+            color="secondary"
             component={Link}
             to="books"
           >

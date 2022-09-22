@@ -15,11 +15,12 @@ body {
   justify-content: space-around;
   margin-top: 10vh;
   background-color: #DDB771;
+  
   transform: translate(100vw, -1vh);
   opacity: 0;
   transition: transform 0.8s cubic-bezier(0.56, 0.25, 0.81, 1.52),
     opacity 0.8s cubic-bezier(0.96, 0.19, 1, 1.13);
-}
+} 
 
 /* 00E6DB */
 
@@ -35,13 +36,14 @@ body {
 @media screen and (min-width: 900px) {
   .link-box {
     position: static;
-    width: 100%;
+    width: 50vw;
     height: 100%;
     margin-top: 0vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    background-color: transparent ;
     margin-left: auto;
     transform: translate(0vh, 0vh);
     opacity: 1;

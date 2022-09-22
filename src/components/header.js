@@ -34,34 +34,65 @@ const Header = () => {
       padding: "5%",
       display: "flex",
       flexDirection: "row",
-      alignItems: "space-between",
+      alignItems: "space-around",
+      
       height: "10vh",
-      backgroundColor:"transparent",
+      backgroundColor: "transparent",
       [theme.breakpoints.up("md")]: {
         opacity: 1,
-        position:"absolute",
+        position: "absolute",
         backgroundColor: "#001712",
-        height: "5vh"
+        height: "12vh",
+        padding: 0,
       },
     }),
     drawerBox: {
       marginLeft: "auto",
-      
     },
+    button: theme => ({
+      [theme.breakpoints.up("md")]: {
+        backgroundColor: "transparent",
+        color: "#DDB771",
+        border: "none",
+        boxShadow: "none",
+        
+        "&:hover": {
+          backgroundColor: "transparent",
+          color: "#f3d397",
+          boxShadow: "none",
+          fontSize: "16px" ,
+        },
+      },
+    }),
   }
   return (
     <AppBar component="nav" sx={styles.appbar}>
       <nav ref={boxRef} className={linkBox}>
-        <Button variant="contained" component={Link} to="/">
+        <Button sx={styles.button} variant="contained" component={Link} to="/">
           Home
         </Button>
-        <Button variant="contained" component={Link} to="/about">
+        <Button
+          sx={styles.button}
+          variant="contained"
+          component={Link}
+          to="/about"
+        >
           About
         </Button>
-        <Button variant="contained" component={Link} to="/books">
+        <Button
+          sx={styles.button}
+          variant="contained"
+          component={Link}
+          to="/books"
+        >
           Books
         </Button>
-        <Button variant="contained" component={Link} to="/contact">
+        <Button
+          sx={styles.button}
+          variant="contained"
+          component={Link}
+          to="/contact"
+        >
           Contact
         </Button>
       </nav>
