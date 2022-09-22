@@ -1,7 +1,12 @@
-body {
-  background-color: #141000;
+*{
   margin:0px;
   padding:0px;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: #141000;
 }
 .link-box {
   position: absolute;
@@ -34,6 +39,32 @@ body {
   }
 
 @media screen and (min-width: 900px) {
+   
+  ::-webkit-scrollbar {
+   width: 15px ;
+}
+
+::-webkit-scrollbar-track {
+  background: #141000;
+  border-left: 1px solid #DDB771 ;
+
+  margin-top: -10px ;
+  margin-bottom: -10px ;
+
+}
+::-webkit-scrollbar-thumb {   
+   background:#DDB771 ;
+   height:30% ;
+   border-radius: 100vw ;
+}
+
+@supports(scrollbar-color: red green) {
+  *{
+    scrollbar-color:  #DDB771 #141000 ;
+  }
+
+}
+   
   .link-box {
     position: static;
     width: 50vw;

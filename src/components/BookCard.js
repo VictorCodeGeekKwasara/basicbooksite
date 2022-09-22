@@ -3,10 +3,24 @@ import { Typography, Card } from "@mui/material"
 import { Link } from "gatsby"
 import { cardMedia, cardText, bookCard } from "./bookcard.module.css"
 
+const styles = {
+  bookcard: {
+    backgroundColor: "#001712",
+    color: "primary.main",
+    transition: "background-color 1s ease",
+    "&:hover": {
+      backgroundColor: "rgba(30,53,48)",
+      color: "primary.main",
+      width:"91.5vw",
+      height:"31vh",
+    },
+  },
+}
+
 const BookCard = ({ title, author, year, alt, slug, image }) => {
   return (
     <Card
-      sx={{ backgroundColor: "#001712", color: "primary.main" }}
+      sx={styles.bookcard}
       component={Link}
       to={`${slug}`}
       className={bookCard}
